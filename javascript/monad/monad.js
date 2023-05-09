@@ -17,3 +17,4 @@ const a = val => () => val
 // }
 
 console.log(a_lazy())
+
