@@ -1,0 +1,26 @@
+console.log("start")
+
+const a = () => {
+
+    setTimeout (() => {
+        console.log("timeout1")
+
+        b()
+    }, 5000)
+    
+}
+    
+const b = () => {
+
+    setTimeout (() => {
+        console.log("timeout2")
+
+    }, 5000)
+
+}
+
+a()
+
+console.log("end")
+
+

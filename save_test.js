@@ -1,0 +1,27 @@
+const mongoose = require('mongoose');
+const HOST = 'localhost:27017';
+const DB = 'my_database';
+const mongodbURL = `mongodb://${HOST}/${DB}`;
+
+mongoose.connect(mongodbURL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('connection successful'))
+  .catch((err) => console.error(err));
+
+const Photo = require('./models/photo.js');
+
+const s = async () => {
+  const _data = {
+    "albumId": 12010,
+    "id": 12010,
+    "title": "큰돌",
+    "url": "test",
+    "thumbnailUrl": "https://via.placeholder.com/150/13454b"
+  };
+
+  const new_photo = new Photo(_data);
+  const t = await new_photo.save();
+
+  console.log(t);
+};
+
+s();
