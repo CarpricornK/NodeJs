@@ -2,7 +2,6 @@
   "name": "6th",
   "version": "1.0.0",
   "main": "server_driver.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,6 +15,7 @@
     "fxjs": "^0.21.3",
     "mongodb": "^3.3.5",
     "mongoose": "^5.7.5",
+    "morgan": "^1.10.0",
     "ramda": "^0.29.0"
   },
   "repository": {
